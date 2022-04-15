@@ -511,10 +511,10 @@ h5 {
 }
 
 #footer {
-    box-shadow: 0 0 10px 2px var(--secondary-color);
+    box-shadow: 0 0 10px 2px rgb(194, 194, 194);
     background-color: var(--secondary-color);
     display: flex;
-    height: 35vh;
+    height: 55vh;
     justify-content: space-around;
 }
 
@@ -529,7 +529,7 @@ h5 {
 }
 
 #footer ul li {
-    padding-top: 25px;
+    padding-top: 20px;
     transition: translate 150ms linear;
 }
 
@@ -547,10 +547,10 @@ h5 {
 }
 
 .info-footer-box {
+    margin-top: 40px;
     width: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .info-footer-box p {
