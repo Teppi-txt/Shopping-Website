@@ -68,6 +68,21 @@ h4 {
     font-weight: 600;
 }
 
+#logo:hover {
+    animation-name: shake;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes shake{
+    
+
+    /* 0% {transform: rotate(4deg);}
+    50% {transform: rotate(-8deg)}
+    100% {transform: rotate(4deg)} */
+}
+
 #navbar li a{
     text-decoration: none;
     color: var(--primary-color);
@@ -79,8 +94,28 @@ h4 {
     color: var(--accent-color);
 }
 
-#navbar li a:hover::after,
+#navbar li a::after{
+    opacity: 0;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--accent-color);
+    position: absolute;
+    bottom: 14px;
+    left: 20px;
+    animation-name: scale-tab;
+    animation-duration: 0.5s;
+    animation-play-state: running;
+    transition: 0.3s linear;
+}
+
+#navbar li a:hover::after {
+    opacity: 1;
+    width: 30%;
+}
+
 #navbar li a.active::after {
+    opacity: 1;
     content: "";
     width: 30%;
     height: 2px;
