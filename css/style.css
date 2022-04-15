@@ -545,3 +545,18 @@ h5 {
 #footer ul li a:hover {
     color: orange;
 }
+
+.info-footer-box {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-footer-box p {
+    color: white;
+}
+
+.info-footer-box h3 {
+    font-size: 26px;
+}
