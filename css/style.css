@@ -137,7 +137,7 @@ h4 {
     z-index: 2;
 }
 
-.button::after{
+.button::before{
     position: absolute;
     content: "";
     width: 3em;
@@ -155,9 +155,28 @@ h4 {
     color: back
 }
 
-.button:hover::after {
+.button:hover::before {
     width: 150%;
     background-color: orange;
+}
+
+.button:hover .button-arrow{
+    transform: translateX(15px);
+}
+
+.button-arrow {
+    padding-left: 5px;
+    z-index: 2;
+    transition: transform 0.3s ease-in-out;
+}
+
+.shiftable {
+    width: fit-content;
+    transition: transform 0.5s ease-in-out;
+}
+
+.shiftable:hover {
+    transform: translateX(10%);
 }
 
 /* @keyframes explore-wiper {
