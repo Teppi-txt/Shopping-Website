@@ -36,6 +36,7 @@ h2 {
     color: var(--text-color);
     font-weight: 800;
     padding: 0px 0px;
+    z-index: 2;
 }
 
 h3 {
@@ -290,10 +291,12 @@ h5 {
     position: relative;
     border-radius: 25px;
     /* border: 3px solid var(--text-color); */
-    box-shadow: 0 0 30px 3px var(--text-color);
+    box-shadow: 0 0 10px 2px rgb(194, 194, 194);
     background: var(--background-color);
     width: 23%;
     height: 95%;
+    min-width: 250px;
+    min-height: 350px;
     margin: 10px;
     transition: all 0.1s ease-in;
 }
@@ -418,4 +421,127 @@ h5 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+#categories {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-color);
+    padding: 0 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel {
+    position: relative;
+    height: 100%;
+    margin: 0% 0%;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    flex-wrap: wrap;
+    transition: all 0.1s ease-in-out;
+}
+
+.main-caption::before {
+    opacity: 0;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    transition: 0.3s linear;
+}
+
+.row {
+    width: 100%;
+    height: 30%;
+    margin-bottom: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.panel:hover {
+    transform: scale(1.05);
+}
+
+.panel:hover .main-caption {
+    transform: translateX(8%);
+}
+
+.panel:hover .main-caption::before {
+    width: 100%;
+    opacity: 1;
+}
+
+.panel img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+    z-index: 0;
+}
+
+.caption {
+    color:orange;
+    margin: 0;
+    padding-left: 5%;
+    transform: translateY(1em);
+}
+
+.main-caption {
+    position: relative;
+    color: var(--primary-color);
+    padding-left: 5%;
+    margin: 0;
+    transition: all 0.2s ease-in;
+}
+
+#footer {
+    box-shadow: 0 0 10px 2px var(--secondary-color);
+    background-color: var(--secondary-color);
+    display: flex;
+    height: 35vh;
+    justify-content: space-around;
+}
+
+#footer ul {
+    list-style-type: none;
+    margin: 15px;
+}
+
+#footer ul p {
+    font-weight: 600;
+    color: white;
+}
+
+#footer ul li {
+    padding-top: 25px;
+    transition: translate 150ms linear;
+}
+
+#footer ul li:hover {
+    transform: translateX(4px);
+}
+
+#footer ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+#footer ul li a:hover {
+    color: orange;
 }
